@@ -7,6 +7,7 @@ public class Circulo extends FigGeo{
     
     private double radio;
     private static final double PI = Math.PI; 
+    private double area;
 
     public double getRadio() {
         return radio;
@@ -29,15 +30,13 @@ public class Circulo extends FigGeo{
     }
         
     @Override
-    public double calcularPerimetro(){
-         this.perimetro = 2 * PI  * radio;
-         return perimetro;
+    protected double calcularPerimetro(){
+         return 2 * PI  * radio;
     }
     
     @Override
-    public double calcularArea(){
-        this.area = Math.pow(radio, 2) * PI;
-        return area;  
+    protected double calcularArea(){ 
+        return Math.pow(radio, 2) * PI;  
     }
         
     
